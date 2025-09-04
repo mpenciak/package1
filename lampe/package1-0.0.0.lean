@@ -2,6 +2,3 @@
 
 import «package1-0.0.0».Extracted
 
-namespace «package1-0.0.0»
-
-open Lampe

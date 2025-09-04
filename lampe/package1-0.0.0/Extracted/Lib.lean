@@ -5,19 +5,16 @@ import Lampe
 
 open Lampe
 
-namespace «package1-0.0.0»
-namespace Extracted
-
-noir_trait_impl[impl_430]<> TraitOne<> for StructOne<> where [] := {
-  noir_def method_one<>(self: StructOne<>) -> Field := {
+noir_trait_impl[impl_430]<> «package1-0.0.0»::TraitOne<> for «package1-0.0.0»::StructOne<> where [] := {
+  noir_def method_one<>(self: «package1-0.0.0»::StructOne<>) -> Field := {
     self.0
   };
 }
 
-noir_def function_one<>(input: Field) -> StructOne<> := {
-  (#_makeData returning StructOne<>)(input)
+noir_def «package1-0.0.0»::function_one<>(input: Field) -> «package1-0.0.0»::StructOne<> := {
+  (#_makeData returning «package1-0.0.0»::StructOne<>)(input)
 }
 
 def Lib.env : Env := Env.mk
-  [function_one]
+  [«package1-0.0.0::function_one»]
   [impl_430]
